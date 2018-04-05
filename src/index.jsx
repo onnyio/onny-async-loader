@@ -12,6 +12,7 @@
 
 import React from 'react';
 import loadable from 'react-loadable';
+import Loading from './loading';
 
 /**
  *
@@ -29,6 +30,10 @@ export default (opts) => {
         <Component {...props} />
       );
     };
+  }
+
+  if (!opts.loading) {
+    opts.loading = Loading; // eslint-disable-line no-param-reassign
   }
   return loadable(opts);
 };
