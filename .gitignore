@@ -2,7 +2,6 @@
 
 # Onnly specific
 dist
-package-lock.json
 
 .idea/**
 
